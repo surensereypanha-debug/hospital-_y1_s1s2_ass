@@ -1,0 +1,109 @@
+.hero{
+background:#f8fbff;
+min-height:80vh;
+display:flex;
+align-items:center;
+}
+
+.hero-img{
+max-width:100%;
+height:auto;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+.hero{
+text-align:center;
+padding:40px 0;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero-img{
+width:250px;
+margin-top:20px;
+}
+
+}
+
+/* SERVICES */
+
+.service-icon{
+font-size:40px;
+}
+
+.service-card{
+transition:0.3s;
+border-radius:12px;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+/* DOCTORS */
+
+.doctor-img{
+height:250px;
+object-fit:cover;
+}
+
+.doctor-card{
+transition:0.3s;
+border-radius:12px;
+}
+
+.doctor-card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.footer{
+background:#868789;
+}
+
+.footer-link{
+color:#ccc;
+text-decoration:none;
+display:block;
+margin-bottom:8px;
+transition:0.3s;
+}
+
+.footer-link:hover{
+color:#0d6efd;
+padding-left:5px;
+}
+
+.footer-text{
+color:#ccc;
+margin-bottom:6px;
+}
+
+/* DISEASES SECTION */
+.disease-icon{
+  font-size:40px;
+  color:#0d6efd;
+  transition:0.3s;
+}
+
+.disease-card{
+  transition:all 0.3s ease;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+.disease-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.disease-card:hover .disease-icon{
+  transform:scale(1.2);
+  color:#0a58ca;
+}

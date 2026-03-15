@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>City Hospital</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">🏥 City Hospital</a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+
+              
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero py-5">
+
+        <div class="container">
+
+            <div class="row align-items-center text-center text-md-start">
+
+                <!-- Text -->
+                <div class="col-md-6 mb-4 mb-md-0">
+
+                    <h1 class="display-5 fw-bold">
+                        Welcome to City Hospital
+                    </h1>
+
+                    <p class="lead">
+                        We provide the best medical services with modern technology and professional doctors.
+                    </p>
+
+                    <button class="btn btn-primary btn-lg px-4" onclick="book()">
+                        Book Appointment
+                    </button>
+
+                </div>
+
+                <!-- Image -->
+                <div class="col-md-6 text-center">
+
+                    <img src="Doctor.png" class="img-fluid hero-img">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="diseases py-5 bg-light">
+  <div class="container text-center">
+
+    <h2 class="fw-bold mb-5">Types of Diseases</h2>
+
+    <div class="row g-4">
+
+      <!-- Disease 1 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card disease-card h-100 p-4 border-0 shadow-sm" onclick="openDisease('cardiology')">
+          <div class="disease-icon mb-3">❤️</div>
+          <h5 class="fw-bold">Cardiovascular</h5>
+          <p class="text-muted">Heart-related diseases including heart attack and hypertension.</p>
+        </div>
+      </div>
+
+      <!-- Disease 2 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card disease-card h-100 p-4 border-0 shadow-sm" onclick="openDisease('diabetes')">
+          <div class="disease-icon mb-3">🩸</div>
+          <h5 class="fw-bold">Diabetes</h5>
+          <p class="text-muted">Blood sugar disorders and insulin management guidance.</p>
+        </div>
+      </div>
+
+      <!-- Disease 3 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card disease-card h-100 p-4 border-0 shadow-sm" onclick="openDisease('respiratory')">
+          <div class="disease-icon mb-3">🫁</div>
+          <h5 class="fw-bold">Respiratory</h5>
+          <p class="text-muted">Asthma, bronchitis, pneumonia, and other lung conditions.</p>
+        </div>
+      </div>
+
+      <!-- Disease 4 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card disease-card h-100 p-4 border-0 shadow-sm" onclick="openDisease('neurology')">
+          <div class="disease-icon mb-3">🧠</div>
+          <h5 class="fw-bold">Neurological</h5>
+          <p class="text-muted">Brain and nervous system disorders like stroke and epilepsy.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    
+<section class="services py-5 bg-light">
+  <div class="container text-center">
+
+    <h2 class="fw-bold mb-5">Our Medical Services</h2>
+
+    <div class="row g-4">
+
+      <!-- Service 1 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card service-card h-100 p-4 border-0 shadow-sm" onclick="openService('emergency')">
+          <div class="service-icon mb-3">💉</div>
+          <h5 class="fw-bold">Emergency Care</h5>
+          <p class="text-muted">24/7 emergency medical treatment with fast response.</p>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card service-card h-100 p-4 border-0 shadow-sm" onclick="openService('checkup')">
+          <div class="service-icon mb-3">🩺</div>
+          <h5 class="fw-bold">General Checkup</h5>
+          <p class="text-muted">Complete health checkup with professional doctors.</p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card service-card h-100 p-4 border-0 shadow-sm" onclick="openService('pharmacy')">
+          <div class="service-icon mb-3">💊</div>
+          <h5 class="fw-bold">Pharmacy</h5>
+          <p class="text-muted">Modern pharmacy with high quality medicine.</p>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card service-card h-100 p-4 border-0 shadow-sm" onclick="openService('laboratory')">
+          <div class="service-icon mb-3">🧬</div>
+          <h5 class="fw-bold">Laboratory</h5>
+          <p class="text-muted">Advanced laboratory testing with accurate results.</p>
+        </div>
+      </div>
+
+      <!-- Service 5: Online Consultation -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card service-card h-100 p-4 border-0 shadow-sm" onclick="openService('online')">
+          <div class="service-icon mb-3">💻</div>
+          <h5 class="fw-bold">Online Consultation</h5>
+          <p class="text-muted">Book virtual appointments with doctors from home.</p>
+        </div>
+      </div>
+
+      <!-- Service 6: Health Tips / Articles -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card service-card h-100 p-4 border-0 shadow-sm" onclick="openService('articles')">
+          <div class="service-icon mb-3">📄</div>
+          <h5 class="fw-bold">Health Articles</h5>
+          <p class="text-muted">Read guides and tips from professional doctors.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section class="doctors py-5">
+
+        <div class="container text-center">
+
+            <h2 class="fw-bold mb-5">Meet Our Doctors</h2>
+
+            <div class="row g-4">
+
+                <!-- Doctor 1 -->
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card doctor-card border-0 shadow-sm">
+
+                        <img src="d1.jpg" class="card-img-top doctor-img">
+
+                        <div class="card-body">
+
+                            <h5 class="fw-bold">Dr. John Smith</h5>
+
+                            <p class="text-muted">Cardiologist</p>
+
+                            <button class="btn btn-outline-primary btn-sm">
+                                View Profile
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Doctor 2 -->
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card doctor-card border-0 shadow-sm">
+
+                        <img src="d2.jpg" class="card-img-top doctor-img">
+
+                        <div class="card-body">
+
+                            <h5 class="fw-bold">Dr. Sarah Lee</h5>
+
+                            <p class="text-muted">Dentist</p>
+
+                            <button class="btn btn-outline-primary btn-sm">
+                                View Profile
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Doctor 3 -->
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card doctor-card border-0 shadow-sm">
+
+                        <img src="d3.jpg" class="card-img-top doctor-img">
+
+                        <div class="card-body">
+
+                            <h5 class="fw-bold">Dr. Michael Chen</h5>
+
+                            <p class="text-muted">Neurologist</p>
+
+                            <button class="btn btn-outline-primary btn-sm">
+                                View Profile
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer  text-light pt-5 pb-3">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Hospital Info -->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <h5 class="fw-bold">🏥 City Hospital</h5>
+
+                    <p class="text-light">
+                        Providing trusted medical care with modern technology and experienced doctors.
+                    </p>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+
+                    <h6 class="fw-bold">Quick Links</h6>
+
+                    <ul class="list-unstyled">
+
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Doctors</a></li>
+                        <li><a href="#" class="footer-link">Services</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 mb-4">
+
+                    <h6 class="fw-bold">Services</h6>
+
+                    <ul class="list-unstyled">
+
+                        <li class="footer-text">Emergency Care</li>
+                        <li class="footer-text">Laboratory</li>
+                        <li class="footer-text">Pharmacy</li>
+                        <li class="footer-text">Health Checkup</li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-4">
+
+                    <h6 class="fw-bold">Contact</h6>
+
+                    <p class="footer-text">📍 Phnom Penh, Cambodia</p>
+
+                    <p class="footer-text">📞 +855 12 345 678</p>
+
+                    <p class="footer-text">✉️ info@cityhospital.com</p>
+
+                </div>
+
+            </div>
+
+            <hr class="border-secondary">
+
+            <div class="text-center">
+
+                <p class="mb-0">
+                    © 2026 City Hospital | All Rights Reserved
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="event.js"></script>
+
+</body>
+
+</html>
